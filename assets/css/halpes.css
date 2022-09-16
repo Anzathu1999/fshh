@@ -17,20 +17,19 @@
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
-  --thm-font: "Nunito", sans-serif;
+  --thm-font:  'Roboto';
+  --thm-heading:  'Bebas Neue';
   --thm-reey-font: "reeyregular";
   --thm-gray: #707876;
   --thm-gray-rgb: 112, 120, 118;
-  /* --thm-primary: #15c8a0; */
+  --thm-primary: #DD4814;
   --thm-primary-rgb: 21, 200, 160;
   --thm-black: #1f2230;
   --thm-black-rgb: 31, 34, 48;
-  --thm-primary: #DD4814;
-
-  --thm-blue-rgb: 33, 36, 146;
-
-
+  
 }
 
 .row {
@@ -76,6 +75,7 @@ h4,
 h5,
 h6 {
   color: var(--thm-black);
+  font-family: var(--thm-heading);
   margin: 0;
 }
 
@@ -152,13 +152,7 @@ h6 {
   line-height: 30px;
 }
 
-.section-title__tagline::before {
-  content: "";
-  background-color: currentColor;
-  width: 44px;
-  height: 2px;
-  margin-right: 10px;
-}
+
 
 .section-title__title {
   margin: 0;
@@ -273,16 +267,18 @@ h6 {
   position: relative;
   width: 15%;
   float: left;
-  background-color: var(--thm-primary);
+  background-color: white;
   text-align: center;
-  padding: 44px 0;
+  padding: 21px 10;
+  margin-top: 17px;
+  margin-left: 8px;
 }
 
 .main-menu-wrapper {
   position: relative;
   background-color: #ffffff;
   float: right;
-  width: 85%;
+  width: 83%;
 }
 
 .main-menu-wrapper__top {
@@ -495,6 +491,7 @@ h6 {
 
 .stricky-header.main-menu {
   padding: 0 60px;
+  font-weight: 400;
 }
 
 .main-menu .main-menu__list,
@@ -506,6 +503,8 @@ h6 {
   list-style-type: none;
   align-items: center;
   display: none;
+  font-family: var(--thm-heading);
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
@@ -533,10 +532,10 @@ h6 {
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   display: flex;
   align-items: center;
-  color: var(--thm-gray);
+  color: var(--thm-black);
   position: relative;
   transition: all 500ms ease;
 }
@@ -1351,7 +1350,7 @@ h6 {
   line-height: 30px;
   color: #ffffff;
   font-size: 14px;
-  font-family: var(--thm-font);
+  font-family: var(--thm-heading);
   font-weight: 500;
   height: 46px;
   align-items: center;
@@ -1566,6 +1565,7 @@ h6 {
 .main-slider {
   overflow: hidden;
   position: relative;
+  height: 500px;
 }
 
 .main-slider .swiper-slide {
@@ -1633,12 +1633,13 @@ h6 {
 }
 
 .main-slider p {
-  font-size: 40px;
+  font-size: 30px;
+  padding-top:20px;
   color: #ffffff;
-  font-family: var(--thm-reey-font);
+  font-family: var(--thm-font);
   font-weight: 400;
   margin: 0;
-  line-height: 50px;
+  line-height: 20px;
   margin-bottom: 19px;
   opacity: 0;
   transform: translateY(100px);
@@ -1657,8 +1658,8 @@ h6 {
   transform: translateY(120px);
   transition-delay: 1000ms;
   transition: transform 2000ms ease, opacity 2000ms ease;
-  font-size: 110px;
-  line-height: 120px;
+  line-height: 97px;
+  font-size: 80px;
 }
 
 .main-slider .thm-btn {
@@ -2451,6 +2452,7 @@ h6 {
   margin-bottom: 45px;
 }
 
+
 /*--------------------------------------------------------------
 # Three Boxes
 --------------------------------------------------------------*/
@@ -2500,10 +2502,9 @@ h6 {
 }
 
 .three-boxes__content {
-  position: fixed;
+  position: relative;
   display: flex;
   z-index: 3;
-
 }
 
 .three-boxes__icon span {
@@ -2521,7 +2522,7 @@ h6 {
 }
 
 .three-boxes__text-box {
-  margin-left: 0px;
+  margin-left: 30px;
   position: relative;
   max-width: 420px;
   width: 100%;
@@ -2575,6 +2576,7 @@ h6 {
 .three-boxes__single-item-3:before {
   background-color: #74706f;
   opacity: 0.9;
+
 }
 
 /*--------------------------------------------------------------
@@ -3395,10 +3397,15 @@ h6 {
 # Brand One
 --------------------------------------------------------------*/
 .brand-one {
+
   position: relative;
+
   display: block;
-  background-color: #eff5f4;
+
+  background-color: #fff;
+
   padding: 30px 0 10px;
+
 }
 
 .brand-one__carousel {
@@ -3442,14 +3449,33 @@ h6 {
   position: relative;
   -webkit-transition: 500ms;
   transition: 500ms;
-
+ 
 }
 
 .brand-one__single:hover .brand-one__img>img {
   opacity: 0.7;
 }
 
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer {
+  position: relative;
+  display: block;
+  padding: 92px 0 0;
+}
 
+.site-footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
 
 .site-footer-bg:before {
   position: absolute;
@@ -3736,6 +3762,7 @@ h6 {
 .site-footer__bottom-copy-right p a:hover {
   color: #ffffff;
 }
+
 
 /*--------------------------------------------------------------
 # Introduction
@@ -7350,4 +7377,13 @@ h6 {
 .become-volunteer-page__btn {
   position: relative;
   margin-top: 10px;
+}
+
+/* Custom */
+.custom-nav{
+  color: #000;
+}
+.custom-nav a{
+  color: #000 !important;
+  opacity: 1 !important;
 }
