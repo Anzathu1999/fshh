@@ -25,8 +25,11 @@
           </div>
         </div>
       </div>
+
     </div>
+  <center><p style="margin-top:40px; font-size: 14px;"> &copy Copyright 2022. All Rights Reserved</p></center>
   </section>
+
   <!--Brand One End-->
 </template>
 <script>

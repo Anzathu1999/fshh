@@ -17,15 +17,19 @@
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
-  --thm-font: "Nunito", sans-serif;
+  --thm-font:  'Roboto';
+  --thm-heading:  'Bebas Neue';
   --thm-reey-font: "reeyregular";
   --thm-gray: #707876;
   --thm-gray-rgb: 112, 120, 118;
-  --thm-primary: #15c8a0;
+  --thm-primary: #DD4814;
   --thm-primary-rgb: 21, 200, 160;
   --thm-black: #1f2230;
   --thm-black-rgb: 31, 34, 48;
+  
 }
 
 .row {
@@ -71,6 +75,7 @@ h4,
 h5,
 h6 {
   color: var(--thm-black);
+  font-family: var(--thm-heading);
   margin: 0;
 }
 
@@ -147,13 +152,7 @@ h6 {
   line-height: 30px;
 }
 
-.section-title__tagline::before {
-  content: "";
-  background-color: currentColor;
-  width: 44px;
-  height: 2px;
-  margin-right: 10px;
-}
+
 
 .section-title__title {
   margin: 0;
@@ -268,16 +267,18 @@ h6 {
   position: relative;
   width: 15%;
   float: left;
-  background-color: var(--thm-primary);
+  background-color: white;
   text-align: center;
-  padding: 44px 0;
+  padding: 21px 10;
+  margin-top: 17px;
+  margin-left: 8px;
 }
 
 .main-menu-wrapper {
   position: relative;
   background-color: #ffffff;
   float: right;
-  width: 85%;
+  width: 83%;
 }
 
 .main-menu-wrapper__top {
@@ -490,6 +491,7 @@ h6 {
 
 .stricky-header.main-menu {
   padding: 0 60px;
+  font-weight: 400;
 }
 
 .main-menu .main-menu__list,
@@ -501,6 +503,8 @@ h6 {
   list-style-type: none;
   align-items: center;
   display: none;
+  font-family: var(--thm-heading);
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
@@ -528,10 +532,10 @@ h6 {
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
   display: flex;
   align-items: center;
-  color: var(--thm-gray);
+  color: var(--thm-black);
   position: relative;
   transition: all 500ms ease;
 }
@@ -1346,7 +1350,7 @@ h6 {
   line-height: 30px;
   color: #ffffff;
   font-size: 14px;
-  font-family: var(--thm-font);
+  font-family: var(--thm-heading);
   font-weight: 500;
   height: 46px;
   align-items: center;
@@ -1561,6 +1565,7 @@ h6 {
 .main-slider {
   overflow: hidden;
   position: relative;
+  height: 500px;
 }
 
 .main-slider .swiper-slide {
@@ -1628,12 +1633,13 @@ h6 {
 }
 
 .main-slider p {
-  font-size: 40px;
+  font-size: 30px;
+  padding-top:20px;
   color: #ffffff;
-  font-family: var(--thm-reey-font);
+  font-family: var(--thm-font);
   font-weight: 400;
   margin: 0;
-  line-height: 50px;
+  line-height: 20px;
   margin-bottom: 19px;
   opacity: 0;
   transform: translateY(100px);
@@ -1652,8 +1658,8 @@ h6 {
   transform: translateY(120px);
   transition-delay: 1000ms;
   transition: transform 2000ms ease, opacity 2000ms ease;
-  font-size: 110px;
-  line-height: 120px;
+  line-height: 97px;
+  font-size: 80px;
 }
 
 .main-slider .thm-btn {
@@ -2392,7 +2398,7 @@ h6 {
 .join-one {
   position: relative;
   display: block;
-  padding: 87px 0 100px;
+  padding: 60px 60px 50px 60px;
 }
 
 @media (min-width: 992px) {
@@ -2428,16 +2434,24 @@ h6 {
 .join-one__inner {
   position: relative;
   display: block;
-  text-align: center;
+  text-align: left;
+  margin-left: 90px;
 }
 
 .join-one__title {
-  font-size: 60px;
+  font-size: 40px;
   color: #ffffff;
   font-weight: 900;
-  line-height: 70px;
+  line-height: 25px;
   margin-bottom: 45px;
 }
+
+.join-one__body {
+  color: #ffffff;
+  line-height: 25px;
+  margin-bottom: 45px;
+}
+
 
 /*--------------------------------------------------------------
 # Three Boxes
@@ -2472,7 +2486,7 @@ h6 {
   height: 100%;
   width: 100%;
   content: "";
-  background-color: rgba(var(--thm-primary-rgb), 0.9);
+  background-color: rgba(206, 81, 64, 0.9);
   z-index: 2;
 }
 
@@ -2524,7 +2538,7 @@ h6 {
 
 .three-boxes__text {
   margin: 0;
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
   line-height: 34px;
 }
@@ -2555,7 +2569,14 @@ h6 {
 }
 
 .three-boxes__single-item-2:before {
-  background-color: rgba(206, 81, 64, 0.9);
+  background-color: #202488;
+  opacity: 0.9;
+}
+
+.three-boxes__single-item-3:before {
+  background-color: #74706f;
+  opacity: 0.9;
+
 }
 
 /*--------------------------------------------------------------
@@ -3376,10 +3397,15 @@ h6 {
 # Brand One
 --------------------------------------------------------------*/
 .brand-one {
+
   position: relative;
+
   display: block;
+
   background-color: #eff5f4;
-  padding: 60px 0 60px;
+
+  padding: 30px 0 10px;
+
 }
 
 .brand-one__carousel {
@@ -3458,7 +3484,7 @@ h6 {
   height: 100%;
   width: 100%;
   content: "";
-  background-color: rgba(31, 34, 48, 0.95);
+
 }
 
 .site-footer__top {
@@ -3475,10 +3501,10 @@ h6 {
 }
 
 .footer-widget__text {
-  font-size: 16px;
+  font-size: 14px;
   color: #b8bbc9;
   margin: 0;
-  line-height: 34px;
+  line-height: 24px;
 }
 
 .footer-widget__about-btn {
@@ -3507,14 +3533,17 @@ h6 {
   position: relative;
   display: block;
   float: left;
+  line-height: 14px;
+
 }
 
 .footer-widget__explore-list li+li {
   margin-top: 10px;
+
 }
 
 .footer-widget__explore-list li a {
-  font-size: 16px;
+  font-size: 14px;
   color: #b8bbc9;
   font-weight: 700;
   transition: all 500ms ease;
@@ -3566,7 +3595,7 @@ h6 {
 }
 
 .footer-widget__contact-list li .icon i {
-  color: var(--thm-primary);
+  color: white;
   font-size: 35px;
   line-height: 35px;
 }
@@ -3578,7 +3607,7 @@ h6 {
 .footer-widget__contact-list li .text p {
   font-size: 16px;
   color: #ffffff;
-  font-weight: 800;
+  font-weight: 200;
   margin: 0;
   line-height: 20px;
 }
@@ -3586,14 +3615,14 @@ h6 {
 .footer-widget__contact-list li .text p span {
   font-size: 14px;
   color: #afb2c0;
-  font-weight: 700;
+  font-weight: 200;
   display: block;
 }
 
 .footer-widget__contact-list li .text p a {
   font-size: 16px;
   color: #ffffff;
-  font-weight: 800;
+  font-weight: 200;
   transition: all 500ms ease;
 }
 
@@ -3733,6 +3762,7 @@ h6 {
 .site-footer__bottom-copy-right p a:hover {
   color: #ffffff;
 }
+
 
 /*--------------------------------------------------------------
 # Introduction
@@ -7347,4 +7377,13 @@ h6 {
 .become-volunteer-page__btn {
   position: relative;
   margin-top: 10px;
+}
+
+/* Custom */
+.custom-nav{
+  color: #000;
+}
+.custom-nav a{
+  color: #000 !important;
+  opacity: 1 !important;
 }

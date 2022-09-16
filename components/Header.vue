@@ -3,7 +3,7 @@
     <header class="main-header clearfix">
       <div class="main-header__logo">
         <nuxt-link to="/">
-          <img :src="require(`~/assets/images${logo.light}`)" alt="" />
+          <img :src="require(`~/assets/images${logo.light}`)" width="180" alt=""/>
         </nuxt-link>
       </div>
       <div class="main-menu-wrapper">
@@ -12,32 +12,24 @@
             <div class="main-menu-wrapper__left">
               <div class="main-menu-wrapper__left-content">
                 <div class="main-menu-wrapper__left-text">
-                  <p>Welcome to the Charity & Donation Theme</p>
+                  <p>Family Health Services, Kanengo, Area 28 Plot 198, PO Box 30132, Capital City, Lilongwe 3, Malawi</p>
                 </div>
-                <div class="main-menu-wrapper__left-email-box">
-                  <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="email">
-                    <a href="mailto:needhelp@company.com">
-                      needhelp@company.com
-                    </a>
-                  </div>
-                </div>
+             
               </div>
             </div>
             <div class="main-menu-wrapper__right">
               <div class="main-menu-wrapper__right-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="main-menu-wrapper__bottom">
-          <nav class="main-menu">
+        <div class="main-menu-wrapper__bottom" :style="`background-image: url(${require(`~/assets/images/backgrounds/web_menu_bg.png`)});background-size: 200px;background-repeat: repeat-x;`">
+          <nav class="main-menu custom-nav" >
             <div class="main-menu__inner">
               <a
                 href="#"
@@ -46,8 +38,9 @@
               >
                 <i class="fa fa-bars"></i>
               </a>
+        
               <ul class="main-menu__list">
-                <li
+                <li 
                   v-for="item in navMenus"
                   :key="item.name"
                   :class="`${undefined !== item.subItems ? 'dropdown ' : ' '}`"
@@ -76,12 +69,8 @@
                 </li>
               </ul>
               <div class="main-menu__right">
-                <a
-                  href="#"
-                  class="main-menu__search search-toggler icon-magnifying-glass"
-                  @click="searchPopupStatusChange"
-                ></a>
-                <a href="#" class="main-menu__cart icon-shopping-cart"></a>
+             
+            
                 <div class="main-menu__phone-contact">
                   <div class="main-menu__phone-icon">
                     <span class="icon-chat"></span>
@@ -91,9 +80,12 @@
                     <a href="tel:92 666 888 0000">92 666 888 0000</a>
                   </div>
                 </div>
-                <nuxt-link to="/causes-details" class="main-menu__donate-btn"
-                  ><i class="fa fa-heart"></i>Donate
-                </nuxt-link>
+                <a href="#" class="main-menu__cart icon-shopping-cart"></a>
+                <a
+                  href="#"
+                  class="main-menu__search search-toggler icon-magnifying-glass"
+                  @click="searchPopupStatusChange"
+                ></a>
               </div>
             </div>
           </nav>
@@ -107,6 +99,11 @@
       }`"
     >
       <div class="sticky-header__content">
+        <div class="main-header__logon">
+        <nuxt-link to="/">
+          <img :src="require(`~/assets/images${logo.light}`)" width="120" alt=""/>
+        </nuxt-link>
+      </div>
         <div class="main-menu__inner">
           <a
             href="#"
@@ -152,9 +149,7 @@
                 <a href="tel:92 666 888 0000">92 666 888 0000</a>
               </div>
             </div>
-            <nuxt-link to="/causes-details" class="main-menu__donate-btn"
-              ><i class="fa fa-heart"></i>Donate
-            </nuxt-link>
+          
           </div>
         </div>
       </div>
@@ -201,3 +196,40 @@ export default {
   },
 };
 </script>
+<style scoped>
+
+.main-header__logon {
+  position: relative;
+  width: 17%;
+  float: right;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  
+}
+
+.main-menu-wrapper__top {
+
+  background-color: #212494;
+  
+}
+.main-menu-wrapper__left-text p {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+
+}
+.main-menu-wrapper__left-email-box .email a{
+  color: #fff;
+}
+.fab {
+margin: -20px;
+color: white
+
+}
+.main-menu-wrapper__bottom{
+  line-height: 10px;
+}
+
+
+</style>

@@ -3,12 +3,12 @@
   <section class="three-boxes">
     <div class="container-box">
       <div class="row">
-        <div class="col-xl-4" v-for="(feature, index) in features" :key="index">
+        <div class="col-xl-3" v-for="(feature, index) in features" :key="index">
           <!--Three Boxes Single-->
           <div :class="`three-boxes__single three-boxes__single-item-${index}`">
             <div
               class="three-boxes__single-bg"
-              :style="`background-image: url(${require(`~/assets/images/resources/three-boxes-img-1.jpg`)})`"
+              :style="`background-image: url(${require(`~/assets/images/resources/projects/pr-img1.png`)})`"
             ></div>
             <div class="three-boxes__content">
               <div class="three-boxes__icon">
@@ -17,10 +17,10 @@
               <div class="three-boxes__text-box">
                 <h2 v-html="feature.title" />
                 <p class="three-boxes__text" v-html="feature.text" />
-                <nuxt-link :to="feature.url" class="three-boxes__btn"
-                  ><i class="fa fa-heart"></i>
+                <!-- <nuxt-link :to="feature.url" class="three-boxes__btn"
+                  >
                   {{ feature.buttonLabel }}
-                </nuxt-link>
+                </nuxt-link> -->
               </div>
             </div>
           </div>

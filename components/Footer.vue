@@ -4,46 +4,41 @@
     <footer class="site-footer">
       <div
         class="site-footer-bg"
-        :style="`background-image: url(${require(`~/assets/images/backgrounds/footer-bg.jpg`)})`"
+        :style="`background-image: url(${require(`~/assets/images/resources/patterns/pattern_img-bg.png`)}),url(${require(`~/assets/images/resources/patterns/pattern_wht-bg.png`)});background-position: right top, left bottom; background-size: 250px, 300px;`"
       ></div>
       <div class="container">
         <div class="site-footer__top">
-          <div class="row">
-            <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="row" style="padding-left:100px;">
+            <div class="col-xl-4 col-lg-6 col-md-6">
               <div class="footer-widget__column footer-widget__about">
                 <h3 class="footer-widget__title">About</h3>
                 <p class="footer-widget__text">
-                  Lorem ipsum dolor sit ame consect etur pisicing elit sed do
-                  eiusmod tempor incididunt ut labore.
+                  Family Health Services (FHS) formerly PSI/Malawi is a local organization implementing programs aimed at improving lives of Malawians.
                 </p>
-                <a href="#" class="footer-widget__about-btn"
-                  ><i class="fa fa-heart"></i>Donate
-                </a>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6">
               <div
                 class="footer-widget__column footer-widget__explore clearfix"
               >
                 <h3 class="footer-widget__title">Explore</h3>
                 <ul class="footer-widget__explore-list list-unstyled">
-                  <li><a href="#">Donate</a></li>
-                  <li><a href="#">Campaigns</a></li>
-                  <li><a href="#">Fundraise</a></li>
-                  <li><a href="#">Volunteers</a></li>
-                  <li><a href="#">Sponsors</a></li>
+                  <li><a href="#">VMMC</a></li>
+                  <li><a href="#">Sexual and Reproductive Health</a></li>
+                  <li><a href="#">Covid-19</a></li>
+                  <li><a href="#">HIV/AIDS</a></li>
                 </ul>
-                <ul
+                <!-- <ul
                   class="footer-widget__explore-list footer-widget__explore-list-two list-unstyled"
                 >
                   <li><a href="#">Fundraising</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><a href="#">Help</a></li>
                   <li><a href="#">Faqs</a></li>
-                </ul>
+                </ul> -->
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="col-xl-4 col-lg-6 col-md-6">
               <div class="footer-widget__column footer-widget__contact">
                 <h3 class="footer-widget__title">Contact</h3>
                 <ul class="list-unstyled footer-widget__contact-list">
@@ -53,8 +48,11 @@
                     </div>
                     <div class="text">
                       <p>
-                        <span>Call Anytime</span>
-                        <a href="tel:92-666-888-0000">92 666 888 0000</a>
+                        <!-- <span>Call Anytime</span> -->
+                        <a href="tel:265882009975">265 882009975</a>
+                      </p>
+                      <p>
+                        <a href="tel:265992876775">265 992876775</a>
                       </p>
                     </div>
                   </li>
@@ -64,9 +62,9 @@
                     </div>
                     <div class="text">
                       <p>
-                        <span>Send Email</span>
+                        <!-- <span>Send Email</span> -->
                         <a href="mailto:needhelp@company.com"
-                          >needhelp@company.com</a
+                          >info@fhs.org.mw</a
                         >
                       </p>
                     </div>
@@ -76,13 +74,13 @@
                       <i class="icon-address"></i>
                     </div>
                     <div class="text">
-                      <p><span>Visit Office</span>80 broklyn golden street</p>
+                      <p>Family Health Services (FHS)</p><p> Head office and Main Warehouse,</p><p> Kanengo, Area 28 Plot 198,</p> <p>P.O.Box 30132, Capital City,</p><p>Lilongwe 3, Malawi</p>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-6">
+            <!-- <div class="col-xl-3 col-lg-6 col-md-6">
               <div class="footer-widget__column footer-widget__newsletter">
                 <h3 class="footer-widget__title">Newsletter</h3>
                 <p class="footer-widget__newsletter-text">
@@ -99,34 +97,7 @@
                   </button>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="site-footer__bottom">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="site-footer__bottom-inner">
-                <div class="site-footer__bottom-logo-social">
-                  <div class="site-footer__bottom-logo">
-                    <nuxt-link to="/">
-                      <img
-                        :src="require(`~/assets/images${logo.light}`)"
-                        alt=""
-                      />
-                    </nuxt-link>
-                  </div>
-                  <div class="site-footer__bottom-social">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                  </div>
-                </div>
-                <div class="site-footer__bottom-copy-right">
-                  <p>© Copyright 2021 by <a href="#">BracketWeb</a></p>
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -139,7 +110,9 @@
         ><i class="fa fa-angle-up"></i
       ></a>
     </div>
+    <SponsorsOne />
   </div>
+
 </template>
 
 <script>
@@ -168,3 +141,32 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+ /*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer {
+  position: relative;
+  display: block;
+  padding: 40px 0 40px 0;
+  background-color: #1f204c;
+}
+
+.site-footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  opacity: 0.4;
+
+
+}
+
+
+</style>>

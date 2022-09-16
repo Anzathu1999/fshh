@@ -13,23 +13,21 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-              <div class="main-slider__content">
+              <div class="main-slider__content" :style="`margin-top:-170px`">
                 <p v-html="item.subtitle" />
                 <h2 v-html="item.title" />
                 <nuxt-link :to="item.buttonUrl" class="thm-btn">
                   <i class="fas fa-arrow-circle-right"></i>
                   {{ item.buttonLabel }}
                 </nuxt-link>
-                <div class="main-slider__shape-1 zoom-fade">
-                  <img src="~images/shapes/main-slider-1-shape-1.png" alt="" />
-                </div>
+              
               </div>
             </div>
           </div>
         </div>
       </swiper-slide>
     </swiper>
-    <MainSliderCounter />
+  
     <!-- If we need navigation buttons -->
     <div class="swiper-pagination" id="main-slider-pagination"></div>
     <div class="main-slider__nav">
@@ -80,3 +78,4 @@ export default {
   },
 };
 </script>
+
