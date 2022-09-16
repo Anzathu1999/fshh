@@ -20,8 +20,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
-  --thm-font:  'Roboto';
-  --thm-heading:  'Bebas Neue';
+  --thm-font:  "Roboto",'sans-serif';
+  --thm-heading:  "Bebas Neue",'sans-serif';
   --thm-reey-font: "reeyregular";
   --thm-gray: #707876;
   --thm-gray-rgb: 112, 120, 118;
